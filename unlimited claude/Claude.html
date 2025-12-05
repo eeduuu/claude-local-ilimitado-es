@@ -667,10 +667,14 @@
             </div>
             
             <div class="sidebar-footer">
+                <button id="clearHistoryBtn" class="new-chat-btn" style="justify-content:flex-start; margin-bottom:10px; color:#f97373;">
+                    <div class="plus-icon" style="background-color:#f97373;">🗑</div>
+                    Borrar chats
+                </button>
                 <div class="user-info">
                     <div class="user-avatar">H</div>
                     <div class="user-details">
-                        <div class="user-name">Hassan</div>
+                        <div class="user-name">Eduard</div>
                         <div class="user-plan">Pro plan</div>
                     </div>
                     <svg class="chevron-down" viewBox="0 0 24 24" fill="currentColor">
@@ -689,11 +693,11 @@
                         <svg class="sun-icon" viewBox="0 0 24 24" fill="currentColor">
                             <path d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zM2 13h2c.55 0 1-.45 1-1s-.45-1-1-1H2c-.55 0-1 .45-1 1s.45 1 1 1zm18 0h2c.55 0 1-.45 1-1s-.45-1-1-1h-2c-.55 0-1 .45-1 1s.45 1 1 1zM11 2v2c0 .55.45 1 1 1s1-.45 1-1V2c0-.55-.45-1-1-1s-1 .45-1 1zm0 18v2c0 .55.45 1 1 1s1-.45 1-1v-2c0-.55-.45-1-1-1s-1 .45-1 1zM5.99 4.58c-.39-.39-1.03-.39-1.41 0-.39.39-.39 1.03 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41L5.99 4.58zm12.37 12.37c-.39-.39-1.03-.39-1.41 0-.39.39-.39 1.03 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0 .39-.39.39-1.03 0-1.41l-1.06-1.06zm1.06-10.96c.39-.39.39-1.03 0-1.41-.39-.39-1.03-.39-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06zM7.05 18.36c.39-.39.39-1.03 0-1.41-.39-.39-1.03-.39-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06z"/>
                         </svg>
-                        Good morning, Hassan
+                        Buenos días, Eduard
                     </div>
                     
                     <div class="search-container">
-                        <textarea class="search-input" id="welcomeInput" placeholder="How can I help you today?" rows="1"></textarea>
+                        <textarea class="search-input" id="welcomeInput" placeholder="¿Cómo puedo ayudarte hoy?" rows="1"></textarea>
                         <div class="search-actions">
                             <button class="search-btn" id="researchBtn">Research</button>
                             <button class="send-btn" id="sendBtn">
@@ -728,35 +732,35 @@
                     </div>
                     
                     <div class="action-buttons">
-                        <button class="action-btn" data-prompt="Help me write">
+                        <button class="action-btn" data-prompt="Ayúdame a escribir">
                             <svg class="action-icon" viewBox="0 0 24 24" fill="currentColor">
                                 <path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/>
                             </svg>
-                            Write
+                            Escribir
                         </button>
-                        <button class="action-btn" data-prompt="Teach me about">
+                        <button class="action-btn" data-prompt="Enséñame sobre">
                             <svg class="action-icon" viewBox="0 0 24 24" fill="currentColor">
                                 <path d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6L23 9l-11-6zm6.82 6L12 12.72 5.18 9 12 5.28 18.82 9zM17 15.99l-5 2.73-5-2.73v-3.72L12 15l5-2.73v3.72z"/>
                             </svg>
-                            Learn
+                            Aprender
                         </button>
-                        <button class="action-btn" data-prompt="Help me code">
+                        <button class="action-btn" data-prompt="Ayúdame a codificar">
                             <svg class="action-icon" viewBox="0 0 24 24" fill="currentColor">
                                 <path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0L19.2 12l-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/>
                             </svg>
-                            Code
+                            Código
                         </button>
-                        <button class="action-btn" data-prompt="Help me with daily tasks">
+                        <button class="action-btn" data-prompt="Ayúdame con las tareas diarias">
                             <svg class="action-icon" viewBox="0 0 24 24" fill="currentColor">
                                 <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
                             </svg>
-                            Life stuff
+                            Cosas de la vida
                         </button>
-                        <button class="action-btn" data-prompt="Help me connect my apps">
+                        <button class="action-btn" data-prompt="Ayúdame a conectar mis aplicaciones">
                             <svg class="action-icon" viewBox="0 0 24 24" fill="currentColor">
                                 <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H6.99C4.79 7 3 8.79 3 11s1.79 4 4 4H11v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1H13V17h4.01c2.2 0 4-1.79 4-4s-1.8-4-4.01-4z"/>
                             </svg>
-                            Connect apps
+                            Conectar aplicaciones
                         </button>
                     </div>
                 </div>
@@ -810,12 +814,70 @@
         let recentConversations = [];
         let currentConversationId = null;
 
+        const STORAGE_KEY = 'claude-local-es-state-v1';
+
+        function saveState() {
+            try {
+                const state = {
+                    recentConversations,
+                    currentConversationId,
+                    currentModel
+                };
+                localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+            } catch (e) {
+                console.error('Error guardando el estado:', e);
+            }
+        }
+
+        function loadState() {
+            try {
+                const raw = localStorage.getItem(STORAGE_KEY);
+                if (!raw) return;
+                const state = JSON.parse(raw);
+
+                if (Array.isArray(state.recentConversations)) {
+                    recentConversations = state.recentConversations;
+                }
+
+                if (
+                    state.currentModel &&
+                    availableModels.some(m => m.apiName === state.currentModel)
+                ) {
+                    currentModel = state.currentModel;
+                }
+
+                if (state.currentConversationId) {
+                    currentConversationId = state.currentConversationId;
+                    const conv = recentConversations.find(c => c.id === currentConversationId);
+                    if (conv) {
+                        chatHistory = conv.messages || [];
+                    }
+                }
+            } catch (e) {
+                console.error('Error cargando el estado:', e);
+            }
+        }
+
         // Initialize when page loads
         document.addEventListener('DOMContentLoaded', function() {
             console.log('Initializing Claude interface...');
+            loadState();               // 🔸 Cargar historial guardado
             initializeInterface();
             updateModelDisplay();
             updateProtocolNotice();
+            updateRecentItems();       // 🔸 Pintar lista de recientes
+
+            // Si había una conversación activa, la mostramos
+            if (chatHistory.length > 0) {
+                switchToChatView();
+                const chatMessages = document.getElementById('chatMessages');
+                if (chatMessages) {
+                    chatMessages.innerHTML = '';
+                    chatHistory.forEach(msg => {
+                        addMessage(msg.content, msg.role);
+                    });
+                }
+            }
         });
 
         function updateProtocolNotice() {
@@ -915,6 +977,7 @@ If you are running this from a local server (like localhost), the issue is almos
             const sendBtn = document.getElementById('sendBtn');
             const chatSendBtn = document.getElementById('chatSendBtn');
             const newChatBtn = document.getElementById('newChatBtn');
+            const clearHistoryBtn = document.getElementById('clearHistoryBtn'); // 🔸 nuevo
             const actionBtns = document.querySelectorAll('.action-btn');
             const modelSelectors = document.querySelectorAll('#modelSelector, #chatModelSelector');
             const authButton = document.getElementById('authButton');
@@ -937,6 +1000,7 @@ If you are running this from a local server (like localhost), the issue is almos
             if (sendBtn) sendBtn.addEventListener('click', handleWelcomeMessage);
             if (chatSendBtn) chatSendBtn.addEventListener('click', handleChatMessage);
             if (newChatBtn) newChatBtn.addEventListener('click', startNewChat);
+            if (clearHistoryBtn) clearHistoryBtn.addEventListener('click', clearAllHistory);
 
             actionBtns.forEach(btn => {
                 btn.addEventListener('click', function() {
@@ -972,6 +1036,7 @@ If you are running this from a local server (like localhost), the issue is almos
             const nextIndex = (currentIndex + 1) % availableModels.length;
             currentModel = availableModels[nextIndex].apiName;
             updateModelDisplay();
+            saveState();  // 🔸 guardar modelo elegido
             console.log('🔄 Model switched to:', availableModels[nextIndex].displayName);
         }
 
@@ -1011,6 +1076,8 @@ If you are running this from a local server (like localhost), the issue is almos
             }
             updateRecentItems();
             console.log('📝 Created new conversation:', title);
+
+            saveState(); // 🔸 guardar después de crear
         }
 
         function updateRecentItems() {
@@ -1047,6 +1114,7 @@ If you are running this from a local server (like localhost), the issue is almos
             });
             document.getElementById('chatInput').focus();
             console.log('📂 Loaded conversation:', conversation.title);
+            saveState(); // 🔸 guardar conversación activa
         }
 
         function switchToChatView() {
@@ -1079,6 +1147,26 @@ If you are running this from a local server (like localhost), the issue is almos
             autoResize(document.getElementById('chatInput'));
             
             console.log('🆕 Started new chat, model reset to default.');
+            saveState(); // 🔸 guardar estado vacío / nuevo
+        }
+
+        function clearAllHistory() {
+            if (!confirm('¿Seguro que quieres borrar todas las conversaciones? Esta acción no se puede deshacer.')) return;
+
+            chatHistory = [];
+            recentConversations = [];
+            currentConversationId = null;
+
+            const chatMessages = document.getElementById('chatMessages');
+            if (chatMessages) chatMessages.innerHTML = '';
+
+            const welcomeScreen = document.getElementById('welcomeScreen');
+            const chatContainer = document.getElementById('chatContainer');
+            if (welcomeScreen) welcomeScreen.style.display = 'flex';
+            if (chatContainer) chatContainer.classList.remove('active');
+
+            updateRecentItems();
+            saveState();
         }
 
         async function sendMessage(message) {
@@ -1147,12 +1235,14 @@ If you are running this from a local server (like localhost), the issue is almos
             if (conversation) {
                 conversation.messages = [...chatHistory];
                 conversation.timestamp = new Date();
+                conversation.model = currentModel;
                 const index = recentConversations.indexOf(conversation);
                 if (index > 0) {
                     recentConversations.splice(index, 1);
                     recentConversations.unshift(conversation);
-                    updateRecentItems();
                 }
+                updateRecentItems();
+                saveState(); // 🔸 guardar siempre que cambie
             }
         }
 
