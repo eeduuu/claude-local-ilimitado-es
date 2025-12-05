@@ -1,4 +1,4 @@
-# Claude Local - Versión mejorada y en español
+# Claude Local en español
 
 Interfaz web local para usar modelos de IA vía Puter, inspirada en la UI oficial de Claude.  
 Funciona en tu navegador y se ejecuta con un servidor local muy sencillo (sin backend propio).
@@ -8,25 +8,30 @@ Este repositorio es una versión mejorada del repositorio original de
 
 ---
 
-## Cambios y mejoras en esta versión:
+## Cambios y mejoras en esta versión
 
-- 🗣️ **Interfaz traducida al español**  
-  Textos de botones, mensajes de ayuda y avisos adaptados.
+En comparación con el repositorio original, esta variante se centra en:
+
+- 🗣️ **Uso cómodo en español**  
+  Toda la interfaz (botones, avisos y textos guía) está traducida y adaptada al castellano, pensada para uso real.
 
 - 💾 **Historial de chats persistente**  
-  - Los chats se guardan automáticamente en `localStorage`.  
-  - Se mantienen entre sesiones mientras no se borren.
+  - Las conversaciones se guardan automáticamente en `localStorage`.  
+  - Puedes cerrar el navegador o apagar el PC sin perder el chat, mientras no los borres manualmente.
 
-- 🗑️ **Gestión de chats mejorada**  
-  - Botón para borrar todos los chats.  
-  - Borrado manual de conversaciones individuales desde la lista de “Chats”.
+- 🗑️ **Control del historial**  
+  - Botón dedicado para borrar **todos** los chats cuando quieras “empezar de cero”.  
 
-- 🔐 **Manejo de autenticación con Puter ajustado**  
-  - Mensajes de error más claros cuando Puter no responde o hay problemas de uso.  
-  - Flujo de autenticación manual ligeramente mejor explicado.
+- 🔐 **Autenticación con Puter más clara**  
+  - Mensajes de error más entendibles cuando Puter no responde o limita el uso.  
+  - Explicación más directa del flujo de autenticación manual para evitar confusiones.
 
-- 🎨 **Personalización visual**   
-  - Colores y pequeños detalles visuales adaptados.
+- ⚙️ **Llamadas a la IA ajustadas para más estabilidad**  
+  - Uso de respuestas completas (sin `stream: true`) para reducir cuelgues tras varios mensajes.  
+  - Envío solo de las últimas interacciones al modelo para no sobrecargar el contexto.
+
+- 🎨 **Personalización visual**  
+  - Textos, colores y pequeños detalles visuales adaptados.
 
 La lógica principal de conexión con Puter.js y el uso de modelos de IA sigue el diseño del proyecto original.
 
