@@ -1,4 +1,4 @@
-# Claude Local en español
+# Claude IA Local Ilimitado en Español
 
 Interfaz web local para usar modelos de IA vía Puter, inspirada en la UI oficial de Claude.  
 Funciona en tu navegador y se ejecuta con un servidor local muy sencillo (sin backend propio).
