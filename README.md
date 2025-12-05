@@ -12,45 +12,45 @@ Este repositorio es una versión mejorada del repositorio original de
 
 En comparación con el repositorio original, esta variante se centra en:
 
-- 🗣️ **Uso cómodo en español**  
+- 🗣️ **Uso cómodo en español:**  
   Toda la interfaz (botones, avisos y textos guía) está traducida y adaptada al castellano, pensada para uso real.
 
-- 💾 **Historial de chats persistente**  
+- 💾 **Historial de chats persistente:**  
   - Las conversaciones se guardan automáticamente en `localStorage`.  
   - Puedes cerrar el navegador o apagar el PC sin perder el chat, mientras no los borres manualmente.
 
-- 🗑️ **Control del historial**  
+- 🗑️ **Control del historial:**  
   - Botón dedicado para borrar **todos** los chats cuando quieras “empezar de cero”.  
 
-- 🔐 **Autenticación con Puter más clara**  
+- 🔐 **Autenticación con Puter más clara:**  
   - Mensajes de error más entendibles cuando Puter no responde o limita el uso.  
   - Explicación más directa del flujo de autenticación manual para evitar confusiones.
 
-- ⚙️ **Llamadas a la IA ajustadas para más estabilidad**  
+- ⚙️ **Llamadas a la IA ajustadas para más estabilidad:**  
   - Uso de respuestas completas (sin `stream: true`) para reducir cuelgues tras varios mensajes.  
   - Envío solo de las últimas interacciones al modelo para no sobrecargar el contexto.
 
-- 🎨 **Personalización visual**  
+- 🎨 **Personalización visual:**  
   - Textos, colores y pequeños detalles visuales adaptados.
 
 La lógica principal de conexión con Puter.js y el uso de modelos de IA sigue el diseño del proyecto original.
 
 ---
 
-## Requisitos:
+## Requisitos
 
-- 🐍 **Python 3**  
+- 🐍 **Python 3:**  
   Solo se usa para levantar el servidor local con `http.server`.  
   No necesitas instalar paquetes extra.
 
-- 🌐 **Navegador moderno**  
+- 🌐 **Navegador moderno:**  
   Chrome, Edge, Firefox, etc.
 
 ---
 
-## Cómo ejecutar en local:
+## Cómo ejecutar en local
 
-### Windows
+### Windows:
 
 1. Descarga este repositorio como ZIP y descomprímelo.
 2. Entra en la carpeta del proyecto.
@@ -58,7 +58,7 @@ La lógica principal de conexión con Puter.js y el uso de modelos de IA sigue e
 4. Se abrirá una ventana de consola y tu navegador irá a una URL tipo:  
    `http://localhost:8010/Claude.html` (o el puerto que especifique el script).
 
-### Mac / Linux / otros
+### Mac / Linux / otros:
 
 1. Descarga y descomprime el ZIP.
 2. Abre una terminal y navega a la carpeta `unlimited claude`.
