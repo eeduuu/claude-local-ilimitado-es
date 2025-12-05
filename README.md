@@ -3,7 +3,7 @@
 Interfaz web local para usar modelos de IA vía Puter, inspirada en la UI oficial de Claude.  
 Funciona en tu navegador y se ejecuta con un servidor local muy sencillo (sin backend propio).
 
-Este repositorio es una versión mejorada del repositorio original de 
+Este repositorio es una versión mejorada del repositorio original
 👉 [hassanmsthf11/unlimited-claude-AI](https://github.com/hassanmsthf11/unlimited-claude-AI).  
 
 ---
@@ -65,4 +65,20 @@ La lógica principal de conexión con Puter.js y el uso de modelos de IA sigue e
 3. Ejecuta:
 
    ```bash
-   python -m http.server 8000
+   python -m http.server 8010
+
+---
+
+## Autor
+
+Esta versión está mantenida por:
+
+- Web personal: [https://dupavi.es](https://dupavi.es)  
+- LinkedIn: [Eduard Pampalona Viladot ](https://www.linkedin.com/in/eeduuu-seo-ia/)
+
+---
+
+## Licencia
+
+Este proyecto mantiene la misma licencia que el repositorio original: **MIT**.  
+Consulta el archivo `LICENSE` para ver el texto completo de la licencia.
