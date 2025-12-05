@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CLAUDE EN ESPAÑOL</title>
-
     <script src="https://js.puter.com/v2/"></script>
     <style>
         * {
@@ -129,46 +128,20 @@
             min-height: 20px;
         }
 
-        /* fila de conversación reciente */
         .recent-item {
-            padding: 6px 0;
+            padding: 8px 0;
             color: #b3b3b3;
             font-size: 13px;
+            cursor: pointer;
+            transition: color 0.2s;
             line-height: 1.4;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 8px;
-        }
-
-        /* título clickable */
-        .recent-item-title {
-            flex: 1;
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
-            cursor: pointer;
         }
 
-        .recent-item-title:hover {
+        .recent-item:hover {
             color: #fff;
-        }
-
-        /* botón de borrar una conversación */
-        .recent-item-delete {
-            border: none;
-            background: transparent;
-            color: #666;
-            font-size: 12px;
-            cursor: pointer;
-            padding: 2px 6px;
-            border-radius: 4px;
-            flex-shrink: 0;
-        }
-
-        .recent-item-delete:hover {
-            background-color: #333;
-            color: #ff7b73;
         }
 
         .empty-state {
@@ -1110,39 +1083,20 @@ If you are running this from a local server (like localhost), the issue is almos
         function updateRecentItems() {
             const recentItemsContainer = document.getElementById('recentItems');
             recentItemsContainer.innerHTML = '';
-
             if (recentConversations.length === 0) {
                 const emptyDiv = document.createElement('div');
                 emptyDiv.className = 'empty-state';
-                emptyDiv.innerHTML = '<span style="color: #666; font-size: 13px; font-style: italic;">No hay conversaciones recientes</span>';
+                emptyDiv.innerHTML = '<span style="color: #666; font-size: 13px; font-style: italic;">No recent conversations</span>';
                 recentItemsContainer.appendChild(emptyDiv);
-                return;
-            }
-
-            recentConversations.forEach(conversation => {
-                const itemDiv = document.createElement('div');
-                itemDiv.className = 'recent-item';
-
-                // título que abre la conversación
-                const titleSpan = document.createElement('span');
-                titleSpan.className = 'recent-item-title';
-                titleSpan.textContent = conversation.title;
-                titleSpan.addEventListener('click', () => loadConversation(conversation.id));
-
-                // botón de borrar solo esta conversación
-                const deleteBtn = document.createElement('button');
-                deleteBtn.className = 'recent-item-delete';
-                deleteBtn.textContent = '🗑';
-                deleteBtn.title = 'Borrar esta conversación';
-                deleteBtn.addEventListener('click', (e) => {
-                    e.stopPropagation();              // que no abra el chat al borrar
-                    deleteConversation(conversation.id);
+            } else {
+                recentConversations.forEach(conversation => {
+                    const itemDiv = document.createElement('div');
+                    itemDiv.className = 'recent-item';
+                    itemDiv.textContent = conversation.title;
+                    itemDiv.addEventListener('click', () => loadConversation(conversation.id));
+                    recentItemsContainer.appendChild(itemDiv);
                 });
-
-                itemDiv.appendChild(titleSpan);
-                itemDiv.appendChild(deleteBtn);
-                recentItemsContainer.appendChild(itemDiv);
-            });
+            }
         }
 
         function loadConversation(conversationId) {
@@ -1256,33 +1210,6 @@ If you are running this from a local server (like localhost), the issue is almos
                 
                 chatHistory.push({ role: 'assistant', content: fullResponse });
                 updateCurrentConversation();
-        
-        function deleteConversation(conversationId) {
-            const index = recentConversations.findIndex(conv => conv.id === conversationId);
-            if (index === -1) return;
-
-            const wasCurrent = (currentConversationId === conversationId);
-
-            // quitamos la conversación de la lista
-            recentConversations.splice(index, 1);
-
-            // si era la que estaba abierta, volvemos a la pantalla de bienvenida
-            if (wasCurrent) {
-                chatHistory = [];
-                currentConversationId = null;
-
-                const chatMessages = document.getElementById('chatMessages');
-                if (chatMessages) chatMessages.innerHTML = '';
-
-                const welcomeScreen = document.getElementById('welcomeScreen');
-                const chatContainer = document.getElementById('chatContainer');
-                if (welcomeScreen) welcomeScreen.style.display = 'flex';
-                if (chatContainer) chatContainer.classList.remove('active');
-            }
-
-            updateRecentItems();
-            saveState();
-        }
                 
             } catch (error) {
                 console.error('❌ Error in sendMessage:', error);
