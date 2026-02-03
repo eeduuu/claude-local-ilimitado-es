@@ -1,5 +1,9 @@
 # Claude IA Local Ilimitado en Español
 
+![Claude](https://img.shields.io/badge/Claude-Desktop-antiquewhite)
+![API](https://img.shields.io/badge/API-OpenRouter%20%2F%20Anthropic-blue)
+![Idioma](https://img.shields.io/badge/Idioma-Español-red)
+
 Interfaz web local para usar modelos de IA vía Puter, inspirada en la UI oficial de Claude.  
 Funciona en tu navegador y se ejecuta con un servidor local muy sencillo (sin backend propio).
 
